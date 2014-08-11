@@ -1,0 +1,143 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="google-site-verification" content="iiaZDiwEssProlX8937vo3A2rB44cTNa98icMN3C4t4" />
+    <meta name="Description" content="Autorouting for schematics. Features automatic pin and component selection.">
+    <meta property="fb:admins" content="1302781436" />
+    <title>WireWizard - Autorouting for schematics. Features automatic pin and component selection.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'wirewizard/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'wirewizard/css/jumbotron-narrow.css' %}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'wirewizard/js/ie-emulation-modes-warning.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.js-video.widescreen {
+  padding-bottom: 57.25%;
+}
+ 
+.js-video.vimeo {
+  padding-top: 0;
+}
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://edasolver.com">Powered by EDAsolver</a></li>
+        </ul>
+        <h3 class="text-muted">WireWizard</h3>
+      </div>
+
+<div class="js-video [vimeo, ] widescreen">
+  <iframe width="560" height="315" src="//www.youtube.com/embed/gdeGS8A6x5Y?showinfo=0&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+</div>
+      <div class="jumbotron" style="margin-top: 20px;">
+        <p><a class="btn btn-lg btn-success" href="/wirewizard/" role="button">Launch application</a></p>
+        <p class="lead">(Mobile not supported)</p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Powered by EDAsolver</h4>
+          <p>WireWizard was created to showcase the functionality of EDAsolver, a framework that can perform much more complex operations.</p>
+
+          <h4>Component database</h4>
+          <p>The toolset is still in early beta, but the database of components includes many popular components.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Easy to use</h4>
+          <p>WireWizard offers a graphical interface that can be learned in a matter of seconds.</p>
+
+          <h4>Cross platform</h4>
+          <p>WireWizard is built using HTML5 and is supported by all modern browsers.</p>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+<script>
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/eh0ZPT65NrV69EeH6K8keQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  accent_color: '#808283',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+}]);
+
+// Identify the user and pass traits
+// To enable, replace sample data with actual user traits and uncomment the line
+UserVoice.push(['identify', {
+  //email:      'john.doe@example.com', // User’s email address
+  //name:       'John Doe', // User’s real name
+  //created_at: 1364406966, // Unix timestamp for the date the user signed up
+  //id:         123, // Optional: Unique id of the user (if set, this should not change)
+  //type:       'Owner', // Optional: segment your users by type
+  //account: {
+  //  id:           123, // Optional: associate multiple users with a single account
+  //  name:         'Acme, Co.', // Account name
+  //  created_at:   1364406966, // Unix timestamp for the date the account was created
+  //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+  //  ltv:          1495.00, // Decimal; lifetime value of the account
+  //  plan:         'Enhanced' // Plan name for the account
+  //}
+}]);
+
+// Add default trigger to the bottom-right corner of the window:
+UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+
+// Or, use your own custom trigger:
+//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+UserVoice.push(['autoprompt', {}]);
+</script>
+</html>
+

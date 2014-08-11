@@ -1,0 +1,116 @@
+{
+  "placed": [
+    {
+      "x": -39.5,
+      "y": -1.5,
+      "type": "placed",
+      "id": 1,
+      "svg_id": "component-1",
+      "dims": {
+        "w": 162,
+        "h": 268,
+        "x1": -120.5,
+        "x2": 41.5,
+        "y1": -135.5,
+        "y2": 132.5
+      },
+      "hovering": false,
+      "component_model": "raspberry_pi_b_plus"
+    },
+    {
+      "x": 236.5,
+      "y": 31.499999999999943,
+      "type": "placed",
+      "id": 2,
+      "svg_id": "component-2",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": 155.5,
+        "x2": 317.5,
+        "y1": 17.499999999999943,
+        "y2": 45.49999999999994
+      },
+      "hovering": false,
+      "component_model": "rikb_11002"
+    },
+    {
+      "x": -269.5,
+      "y": 162.4999999999999,
+      "type": "placed",
+      "id": 3,
+      "svg_id": "component-3",
+      "dims": {
+        "w": 162,
+        "h": 58,
+        "x1": -350.5,
+        "x2": -188.5,
+        "y1": 133.4999999999999,
+        "y2": 191.4999999999999
+      },
+      "hovering": false,
+      "component_model": "nokia_graphic_lcd"
+    },
+    {
+      "x": 233.5,
+      "y": -44.50000000000006,
+      "type": "placed",
+      "id": 4,
+      "svg_id": "component-4",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": 152.5,
+        "x2": 314.5,
+        "y1": -58.50000000000006,
+        "y2": -30.500000000000057
+      },
+      "hovering": false,
+      "component_model": "sen_11957"
+    }
+  ],
+  "links": [
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 4
+      },
+      "headpos": {
+        "x": 233.5,
+        "y": -44.50000000000006
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 2
+      },
+      "headpos": {
+        "x": 236.5,
+        "y": 31.499999999999943
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 3
+      },
+      "headpos": {
+        "x": -269.5,
+        "y": 162.4999999999999
+      }
+    }
+  ],
+  "wires": [],
+  "currid": 5,
+  "solvedone": false
+}

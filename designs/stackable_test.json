@@ -1,0 +1,146 @@
+{
+  "placed": [
+    {
+      "x": -40.5,
+      "y": 9.500000000000057,
+      "type": "placed",
+      "id": 1,
+      "svg_id": "component-1",
+      "dims": {
+        "w": 162,
+        "h": 538,
+        "x1": -121.5,
+        "x2": 40.5,
+        "y1": -259.49999999999994,
+        "y2": 278.50000000000006
+      },
+      "hovering": false,
+      "component_model": "arduino_mega_2560"
+    },
+    {
+      "x": -296.5,
+      "y": -209.5,
+      "type": "placed",
+      "id": 2,
+      "svg_id": "component-2",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": -377.5,
+        "x2": -215.5,
+        "y1": -223.5,
+        "y2": -195.5
+      },
+      "hovering": false,
+      "component_model": "sensor_stick"
+    },
+    {
+      "x": -296.5,
+      "y": -139.50000000000003,
+      "type": "placed",
+      "id": 3,
+      "svg_id": "component-3",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": -377.5,
+        "x2": -215.5,
+        "y1": -153.50000000000003,
+        "y2": -125.50000000000003
+      },
+      "hovering": false,
+      "component_model": "lsm303dlhc"
+    },
+    {
+      "x": -292.5,
+      "y": 55.49999999999994,
+      "type": "placed",
+      "id": 4,
+      "svg_id": "component-4",
+      "dims": {
+        "w": 162,
+        "h": 43,
+        "x1": -373.5,
+        "x2": -211.5,
+        "y1": 33.99999999999994,
+        "y2": 76.99999999999994
+      },
+      "hovering": false,
+      "component_model": "em_506"
+    },
+    {
+      "x": -294.5,
+      "y": 153.4999999999999,
+      "type": "placed",
+      "id": 5,
+      "svg_id": "component-5",
+      "dims": {
+        "w": 162,
+        "h": 43,
+        "x1": -375.5,
+        "x2": -213.5,
+        "y1": 131.9999999999999,
+        "y2": 174.9999999999999
+      },
+      "hovering": false,
+      "component_model": "bluetooth_mate"
+    }
+  ],
+  "links": [
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 5
+      },
+      "headpos": {
+        "x": -294.5,
+        "y": 153.4999999999999
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 2
+      },
+      "headpos": {
+        "x": -296.5,
+        "y": -209.5
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 3
+      },
+      "headpos": {
+        "x": -296.5,
+        "y": -139.50000000000003
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 4
+      },
+      "headpos": {
+        "x": -292.5,
+        "y": 55.49999999999994
+      }
+    }
+  ],
+  "wires": [],
+  "currid": 6,
+  "solvedone": false
+}

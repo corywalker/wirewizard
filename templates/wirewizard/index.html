@@ -1,0 +1,166 @@
+{% load staticfiles %}
+{% load templatetag_handlebars %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google-site-verification" content="iiaZDiwEssProlX8937vo3A2rB44cTNa98icMN3C4t4" />
+    <meta name="Description" content="Autorouting for schematics. Features automatic pin and component selection.">
+    <meta property="fb:admins" content="1302781436" />
+    <title>WireWizard - Autorouting for schematics. Features automatic pin and component selection.</title>
+
+    <script src="{% static "wirewizard/js/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "wirewizard/js/w2ui-1.4.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "wirewizard/js/fuse.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "wirewizard/js/handlebars-v1.3.0.js" %}"></script>
+    <script type="text/javascript" src="{% static "wirewizard/js/underscore-min.js" %}"></script>
+    <script type="text/javascript" src="{% static "wirewizard/guiders/guiders.js" %}"></script>
+    {% if DEBUG %}
+    <script type="text/javascript" src="{% static "wirewizard/js/d3.js" %}"></script>
+    {% else %}
+    <script type="text/javascript" src="{% static "wirewizard/js/d3.min.js" %}"></script>
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="{% static "wirewizard/css/w2ui-1.4.min.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'wirewizard/css/font-awesome-4.1.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/typecolors.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "wirewizard/guiders/guiders.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "wirewizard/css/wirewizard.css" %}">
+  </head>
+  <body>
+    {% tplhandlebars "grid-link" %}
+    {{#if links.length}}
+    <a href="{{links.[0]}}" target="_blank">
+      <p style='color: black'>
+        <i class='fa fa-external-link-square'></i>
+      </p>
+    </a>
+    {{/if}}
+    {% endtplhandlebars %}
+    {% tplhandlebars "inspector" %}
+    <div class="w2ui-panel-title inspector-title" style="top: 0px; display: block;">Inspector</div>
+    {{#if selected}}
+    <table class="inspector-table" border="1" cellspacing="0" cellpadding="2">
+      <tr>
+        <td>Name:</td>
+        <td>{{selected.name}}</td>
+      <tr>
+      <tr>
+        <td>Model:</td>
+        <td>{{selected.model}}</td>
+      <tr>
+      <tr>
+        <td>Class:</td>
+        <td>{{selected.class}}</td>
+      <tr>
+      <tr>
+        <td>Type:</td>
+        <td>{{selected.type}}</td>
+      <tr>
+      {{#if selected.popularity }}
+      <tr>
+        <td>Community:</td>
+        <td>{{selected.popularity}}</td>
+      <tr>
+      {{/if}}
+      {{#if selected.cost }}
+      <tr>
+        <td>Cost:</td>
+        <td>${{selected.cost}}</td>
+      <tr>
+      {{/if}}
+    </table>
+    {{/if}}
+    {% endtplhandlebars %}
+    {% tplhandlebars "solve_fail" %}
+    No valid combinations were found. Please revise the design based on the information below:<br/><br/>
+    <table class="missing-table" border="1" cellspacing="0" cellpadding="5">
+      <tr>
+        <th>Missing resource</th>
+        <th>Model</th>
+        <th>ID</th>
+      </tr>
+      {{#each uns_list}}
+      <tr>
+        <td>{{json params}}</td>
+        <td>{{to_model}}</td>
+        <td>{{to_external_id}}</td>
+      </tr>
+      {{/each}}
+    </table>
+    {% endtplhandlebars %}
+    <div id="layout"></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52974289-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9928573; 
+var sc_invisible=1; 
+var sc_security="57ccd9cc"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free hit
+counters" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/9928573/0/57ccd9cc/1/"
+alt="free hit counters"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script>
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/eh0ZPT65NrV69EeH6K8keQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  accent_color: '#808283',
+    trigger_color: 'white',
+      trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+      }]);
+
+      // Identify the user and pass traits
+      // To enable, replace sample data with actual user traits and uncomment the line
+      UserVoice.push(['identify', {
+        //email:      'john.doe@example.com', // User’s email address
+          //name:       'John Doe', // User’s real name
+            //created_at: 1364406966, // Unix timestamp for the date the user signed up
+              //id:         123, // Optional: Unique id of the user (if set, this should not change)
+                //type:       'Owner', // Optional: segment your users by type
+                  //account: {
+                    //  id:           123, // Optional: associate multiple users with a single account
+                      //  name:         'Acme, Co.', // Account name
+                        //  created_at:   1364406966, // Unix timestamp for the date the account was created
+                          //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+                            //  ltv:          1495.00, // Decimal; lifetime value of the account
+                              //  plan:         'Enhanced' // Plan name for the account
+                                //}
+                                }]);
+
+                                // Add default trigger to the bottom-right corner of the window:
+                                UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+
+                                // Or, use your own custom trigger:
+                                //UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+                                // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+                                UserVoice.push(['autoprompt', {}]);
+                                </script>
+  </body>
+  <script type="text/javascript" src="{% static "wirewizard/js/wirewizard.js" %}"></script>
+</html>
+

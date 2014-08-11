@@ -1,0 +1,206 @@
+{
+  "placed": [
+    {
+      "x": -38.5,
+      "y": 22.500000000000057,
+      "type": "placed",
+      "id": 1,
+      "svg_id": "component-1",
+      "dims": {
+        "w": 162,
+        "h": 538,
+        "x1": -119.5,
+        "x2": 42.5,
+        "y1": -246.49999999999994,
+        "y2": 291.50000000000006
+      },
+      "hovering": false,
+      "component_model": "arduino_mega_2560"
+    },
+    {
+      "x": 279.5000000000001,
+      "y": 120.49999999999994,
+      "type": "placed",
+      "id": 2,
+      "svg_id": "component-2",
+      "dims": {
+        "w": 162,
+        "h": 193,
+        "x1": 198.5000000000001,
+        "x2": 360.5000000000001,
+        "y1": 23.999999999999943,
+        "y2": 216.99999999999994
+      },
+      "hovering": false,
+      "component_model": "rover_5_driver"
+    },
+    {
+      "x": 276.5,
+      "y": -193.5,
+      "type": "placed",
+      "id": 3,
+      "svg_id": "component-3",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": 195.5,
+        "x2": 357.5,
+        "y1": -207.5,
+        "y2": -179.5
+      },
+      "hovering": false,
+      "component_model": "lv_ez3_analog"
+    },
+    {
+      "x": 275.5,
+      "y": -257.5,
+      "type": "placed",
+      "id": 4,
+      "svg_id": "component-4",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": 194.5,
+        "x2": 356.5,
+        "y1": -271.5,
+        "y2": -243.5
+      },
+      "hovering": false,
+      "component_model": "lv_ez3_analog"
+    },
+    {
+      "x": -38.5,
+      "y": 345.5,
+      "type": "placed",
+      "id": 5,
+      "svg_id": "component-5",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": -119.5,
+        "x2": 42.5,
+        "y1": 331.5,
+        "y2": 359.5
+      },
+      "hovering": false,
+      "component_model": "hitec_hs_422"
+    },
+    {
+      "x": -336.5,
+      "y": 164.5,
+      "type": "placed",
+      "id": 6,
+      "svg_id": "component-6",
+      "dims": {
+        "w": 162,
+        "h": 88,
+        "x1": -417.5,
+        "x2": -255.5,
+        "y1": 120.5,
+        "y2": 208.5
+      },
+      "hovering": false,
+      "component_model": "tb6612fng"
+    },
+    {
+      "x": -333.5,
+      "y": -118.5,
+      "type": "placed",
+      "id": 7,
+      "svg_id": "component-7",
+      "dims": {
+        "w": 162,
+        "h": 28,
+        "x1": -414.5,
+        "x2": -252.5,
+        "y1": -132.5,
+        "y2": -104.5
+      },
+      "hovering": false,
+      "component_model": "lsm303dlhc"
+    }
+  ],
+  "links": [
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 5
+      },
+      "headpos": {
+        "x": -38.5,
+        "y": 345.5
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 2
+      },
+      "headpos": {
+        "x": 279.5000000000001,
+        "y": 120.49999999999994
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 3
+      },
+      "headpos": {
+        "x": 276.5,
+        "y": -193.5
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 4
+      },
+      "headpos": {
+        "x": 275.5,
+        "y": -257.5
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 7
+      },
+      "headpos": {
+        "x": -333.5,
+        "y": -118.5
+      }
+    },
+    {
+      "tail": {
+        "id": 1
+      },
+      "type": "permanent",
+      "head": {
+        "id": 6
+      },
+      "headpos": {
+        "x": -336.5,
+        "y": 164.5
+      }
+    }
+  ],
+  "wires": [],
+  "currid": 8,
+  "solvedone": false
+}
